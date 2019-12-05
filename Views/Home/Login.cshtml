@@ -1,0 +1,37 @@
+@model Login
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+        <h1>Login to this Cool Site!</h1>
+        <br>
+    </div>
+        <div class="col">
+        <a href="/">Register</a>
+        <br>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 30px;">
+  <div class="row">
+    <div class="col-4">
+        <form asp-action="LoginAction" asp-controller="Home" method="post">
+        <div class="form-group">
+            <label asp-for="LoginEmail"></label>
+            <span class="text-danger font-weight-bold" asp-validation-for="LoginEmail"></span>
+            <input class="form-control" asp-for="LoginEmail">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LoginPassword"></label>
+            <span class="text-danger font-weight-bold" asp-validation-for="LoginPassword"></span>
+            <input class="form-control" asp-for="LoginPassword">
+        </div>
+
+        <button class="btn btn-info" type="submit">Sign up Now</button>
+        </form>
+    </div>
+  </div>
+</div>
+
